@@ -15,11 +15,6 @@ function Hero() {
       <h2 className="text-2xl text-blue-600 font-medium mb-6">
         Full Stack Developer
       </h2>
-      <p className="text-gray-600 max-w-xl mb-4">
-        {language === "es"
-          ? "Desarrollador Full Stack en formación, último año de Analista en Sistemas en ORT. Construyo productos digitales reales con JavaScript, React, Node.js y SQL."
-          : "Full Stack Developer in training, final year of Systems Analyst at ORT. I build real digital products using JavaScript, React, Node.js and SQL."}
-      </p>
       <p className="text-gray-500 mb-8">
         React • Node.js • JavaScript • SQL • Git
       </p>
