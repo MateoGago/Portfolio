@@ -1,5 +1,5 @@
 import { MdEmail } from "react-icons/md";
-import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { useLanguage } from "../context/LanguageContext";
 
 function Contact() {
@@ -36,13 +36,6 @@ function Contact() {
             className="flex items-center gap-2 bg-white border border-gray-200 text-gray-700 px-6 py-3 rounded-xl hover:border-blue-500 hover:text-blue-600 transition-all shadow-sm font-medium"
           >
             <FaGithub size={20} /> GitHub
-          </a>
-          <a
-            href="https://wa.me/5492804990430"
-            target="_blank"
-            className="flex items-center gap-2 bg-white border border-gray-200 text-gray-700 px-6 py-3 rounded-xl hover:border-blue-500 hover:text-blue-600 transition-all shadow-sm font-medium"
-          >
-            <FaWhatsapp size={20} /> WhatsApp
           </a>
         </div>
       </div>
