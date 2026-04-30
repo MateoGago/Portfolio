@@ -49,7 +49,7 @@ function Skills() {
               key={skill.category}
               className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
             >
-              <h3 className="text-blue-600 font-semibold mb-3">
+              <h3 className="text-gray-700 font-semibold mb-3">
                 {skill.category}
               </h3>
               <div className="flex flex-wrap gap-2">
