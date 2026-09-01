@@ -6,11 +6,19 @@ function Hero() {
 
   return (
     <section className="py-32 flex flex-col justify-center items-center text-center px-8">
-      <img
-        src={foto}
-        alt="Mateo Gago"
-        className="w-60 h-60 rounded-full object-cover shadow-lg mb-6 border-2 border-blue-600"
-      />
+      <div className="relative w-60 h-60 rounded-full overflow-hidden shadow-lg mb-6 border-2 border-[#d8cbb8] bg-[#e8dece]">
+        <img
+          src={foto}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-[center_42%] scale-110 blur-md opacity-60"
+        />
+        <img
+          src={foto}
+          alt="Mateo Gago"
+          className="absolute inset-0 w-full h-full object-cover object-[center_55%] scale-[1] rounded-full"
+        />
+      </div>
       <h1 className="text-5xl font-bold text-gray-900 mb-4">Mateo Gago</h1>
       <h2 className="text-2xl text-blue-600 font-medium mb-6">
         Full Stack Developer

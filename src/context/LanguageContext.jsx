@@ -16,6 +16,8 @@ export function LanguageProvider({ children }) {
   );
 }
 
+// This hook intentionally lives beside its provider so the context API stays together.
+// eslint-disable-next-line react-refresh/only-export-components
 export function useLanguage() {
   return useContext(LanguageContext);
 }

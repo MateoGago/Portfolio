@@ -14,7 +14,7 @@ function Navbar() {
           <img
             src={foto}
             alt="Mateo Gago"
-            className="w-8 h-8 rounded-full object-cover"
+            className="w-8 h-8 rounded-full object-cover object-[center_42%]"
           />
           <h1 className="text-gray-900 text-xl font-bold">Mateo Gago</h1>
         </div>
@@ -27,6 +27,14 @@ function Navbar() {
               className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
             >
               {language === "es" ? "Sobre mí" : "About"}
+            </a>
+          </li>
+          <li>
+            <a
+              href="#education"
+              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
+            >
+              {language === "es" ? "Formación" : "Education"}
             </a>
           </li>
           <li>
@@ -82,6 +90,15 @@ function Navbar() {
               className="text-gray-600 hover:text-blue-600 font-medium"
             >
               {language === "es" ? "Sobre mí" : "About"}
+            </a>
+          </li>
+          <li>
+            <a
+              href="#education"
+              onClick={() => setMenuOpen(false)}
+              className="text-gray-600 hover:text-blue-600 font-medium"
+            >
+              {language === "es" ? "Formación" : "Education"}
             </a>
           </li>
           <li>

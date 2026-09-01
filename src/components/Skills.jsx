@@ -4,27 +4,27 @@ function Skills() {
   const skills = [
     {
       category: language === "es" ? "Frontend" : "Frontend",
-      items: ["HTML", "CSS", "React"],
+      items: ["HTML", "CSS", "React", "Next.js", "Tailwind CSS", "Responsive Design"],
     },
     {
       category: language === "es" ? "Backend" : "Backend",
-      items: ["Node.js", "Express"],
+      items: ["Node.js", "Express", "Supabase Auth", "Row Level Security"],
     },
     {
       category: language === "es" ? "Lenguajes" : "Languages",
-      items: ["JavaScript", "Java", "C#", "JSON"],
+      items: ["JavaScript", "TypeScript", "Java", "C#", "JSON"],
     },
     {
       category: language === "es" ? "Base de datos" : "Databases",
-      items: ["MySQL", "SQL Server", "MongoDB"],
+      items: ["MySQL", "SQL Server", "MongoDB", "PostgreSQL", "Supabase"],
     },
     {
       category: language === "es" ? "Metodologías" : "Methodologies",
-      items: ["Scrum", "Kanban"],
+      items: ["Scrum", "Kanban", "Feature Branches", "Pull Requests", "Code Review"],
     },
     {
       category: language === "es" ? "Herramientas" : "Tools",
-      items: ["Git", "Microsoft Office", "Vite"],
+      items: ["Git", "GitHub", "Docker", "Biome", "Microsoft Office", "Vite"],
     },
     {
       category: language === "es" ? "Idiomas" : "Spoken Languages",
@@ -34,6 +34,10 @@ function Skills() {
       ],
     },
     { category: "Testing / APIs", items: ["Postman"] },
+    {
+      category: "PWA",
+      items: ["Service Workers", "Web App Manifest", "Offline Support"],
+    },
     { category: "Deploy", items: ["GitHub Pages", "Vercel"] },
   ];
 
@@ -47,7 +51,9 @@ function Skills() {
           {skills.map((skill) => (
             <div
               key={skill.category}
-              className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+              className={`bg-white rounded-xl p-6 shadow-sm border border-gray-100 ${
+                skill.category === "Deploy" ? "md:col-start-2" : ""
+              }`}
             >
               <h3 className="text-gray-700 font-semibold mb-3">
                 {skill.category}
