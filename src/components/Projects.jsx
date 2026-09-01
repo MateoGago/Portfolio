@@ -39,12 +39,12 @@ function Projects() {
   return (
     <section id="projects" className="py-16 px-8">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-slate-50 mb-12 text-center">
           {language === "es" ? "Proyectos" : "Projects"}
         </h2>
         <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project) => (
-            <article key={project.name} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 flex flex-col">
+            <article key={project.name} className="bg-white dark:bg-[#111b2d] rounded-xl p-8 shadow-sm dark:shadow-xl dark:shadow-black/20 border border-gray-100 dark:border-white/10 flex flex-col transition-all dark:hover:border-blue-400/25">
               <div className="flex items-center gap-4 mb-4">
                 {project.image ? (
                   <img src={project.image} alt={`Logo de ${project.name}`} className="w-16 h-16 rounded-2xl object-cover shadow-md" />
@@ -54,20 +54,20 @@ function Projects() {
                   </div>
                 )}
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">{project.name}</h3>
-                  <span className="inline-block bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full mt-1">{project.badge}</span>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-slate-50">{project.name}</h3>
+                  <span className="inline-block bg-blue-50 dark:bg-blue-400/10 text-blue-700 dark:text-blue-200 dark:border dark:border-blue-400/15 text-sm px-3 py-1 rounded-full mt-1">{project.badge}</span>
                 </div>
               </div>
-              <p className="text-gray-600 mb-5 leading-relaxed">{project.description[language]}</p>
+              <p className="text-gray-600 dark:text-[#b8c4d6] mb-5 leading-relaxed">{project.description[language]}</p>
               <ul className="flex flex-wrap gap-2 mb-6" aria-label="Tecnologías">
                 {project.technologies.map((technology) => (
-                  <li key={technology} className="text-xs font-medium text-gray-600 bg-gray-100 px-2.5 py-1 rounded-md">{technology}</li>
+                  <li key={technology} className="text-xs font-medium text-gray-600 dark:text-[#b8c4d6] bg-gray-100 dark:bg-white/5 dark:border dark:border-white/10 px-2.5 py-1 rounded-md">{technology}</li>
                 ))}
               </ul>
               <div className="flex flex-wrap gap-3 mt-auto">
                 <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"><FiExternalLink /> Demo</a>
-                <a href={project.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 border border-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium"><FaGithub /> GitHub</a>
-                <a href={project.linkedin} target="_blank" rel="noreferrer" aria-label={`${project.name} en LinkedIn`} className="flex items-center gap-2 border border-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium"><FaLinkedin /> LinkedIn</a>
+                <a href={project.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-slate-200 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-sm font-medium"><FaGithub /> GitHub</a>
+                <a href={project.linkedin} target="_blank" rel="noreferrer" aria-label={`${project.name} en LinkedIn`} className="flex items-center gap-2 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-slate-200 px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-colors text-sm font-medium"><FaLinkedin /> LinkedIn</a>
               </div>
             </article>
           ))}

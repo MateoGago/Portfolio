@@ -11,9 +11,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <main>
+      <main className="min-h-screen bg-slate-50 dark:bg-[#080d18] transition-colors duration-300">
         <Hero />
-        <hr className="border-gray-200 max-w-4x1 mx-auto" />
+        <hr className="border-gray-200 dark:border-white/10 max-w-4xl mx-auto" />
         <About />
         <Education />
         <Skills />

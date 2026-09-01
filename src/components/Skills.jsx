@@ -42,27 +42,27 @@ function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-16 px-8 bg-gray-50">
+    <section id="skills" className="py-16 px-8 bg-gray-50 dark:bg-[#0c1424] transition-colors">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-slate-50 mb-12 text-center">
           {language === "es" ? `Habilidades` : `Skills`}
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {skills.map((skill) => (
             <div
               key={skill.category}
-              className={`bg-white rounded-xl p-6 shadow-sm border border-gray-100 ${
+              className={`bg-white dark:bg-[#111b2d] rounded-xl p-6 shadow-sm dark:shadow-lg dark:shadow-black/15 border border-gray-100 dark:border-white/10 transition-all dark:hover:border-blue-400/25 dark:hover:-translate-y-0.5 ${
                 skill.category === "Deploy" ? "md:col-start-2" : ""
               }`}
             >
-              <h3 className="text-gray-700 font-semibold mb-3">
+              <h3 className="text-gray-700 dark:text-slate-100 font-semibold mb-3">
                 {skill.category}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {skill.items.map((item) => (
                   <span
                     key={item}
-                    className="bg-blue-50 text-blue-700 text-sm px-3 py-1 rounded-full"
+                    className="bg-blue-50 dark:bg-blue-400/10 text-blue-700 dark:text-blue-200 dark:border dark:border-blue-400/15 text-sm px-3 py-1 rounded-full"
                   >
                     {item}
                   </span>
